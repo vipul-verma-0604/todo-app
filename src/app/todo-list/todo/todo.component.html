@@ -1,0 +1,8 @@
+<td>{{index + 1}}.</td>
+<td>{{todo.name}}</td>
+<td>{{todo.description}}</td>
+<td class="text-center">
+  <button class="btn btn-info" title="Edit" (click)="onEdit(index)"><span class="fa fa-pencil"></span></button>
+  <button class="btn btn-danger" title="Delete" (click)="onDelete(index)"><span class="fa fa-times"></span></button>
+</td>
+

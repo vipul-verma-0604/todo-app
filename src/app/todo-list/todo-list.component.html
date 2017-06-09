@@ -1,0 +1,14 @@
+<table class="table table-bordered table-striped myTable">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="ta-todo" *ngFor="let todo of todos; let i = index" [todo]="todo" [index]="i"></tr>
+  </tbody>
+</table>
+

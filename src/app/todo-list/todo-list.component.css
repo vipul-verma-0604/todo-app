@@ -1,0 +1,4 @@
+.myTable > thead > tr > th{
+    background-color: #666;
+    color: #fff;
+}

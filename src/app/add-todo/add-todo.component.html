@@ -1,0 +1,17 @@
+<div class="add-task">
+  <div class="heading"> <span class="fa fa-plus-circle">&nbsp;</span> Add New Task</div>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+      <label for="">Task Name</label>
+      <input type="text" class="form-control" name="name" ngModel required #name="ngModel">
+      <span *ngIf="!name.value && !name.untouched">Cannot be Empty</span>
+    </div>
+    <div class="form-group">
+      <label for="">Task Description</label>
+      <input type="text" class="form-control" name="description" ngModel required #description="ngModel">
+      <span *ngIf="!description.value && !description.untouched">Cannot be Empty</span>
+    </div>
+    <button class="btn btn-primary" [disabled]="editMode || !f.valid">Add Task</button>
+    <button class="btn btn-success"[disabled]="!editMode || !f.valid">Update Task</button>
+  </form>
+</div>
